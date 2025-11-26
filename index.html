@@ -18,13 +18,7 @@
   <script src="db.js"></script>
   <script src="app.js"></script>
 
-  <script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./service-worker.js')
-      .then(() => console.log("SW listo"))
-      .catch(error => console.log("Error sw", error));
-  }
-</script>
 </body>
 
 </html>
+
