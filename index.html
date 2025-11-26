@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Registro de Visitas</title>
   <link rel="manifest" href="manifest.json">
+  
 </head>
 <body>
   <h2>Registro de Visitas</h2>
@@ -16,5 +17,14 @@
 
   <script src="db.js"></script>
   <script src="app.js"></script>
+
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./service-worker.js')
+      .then(() => console.log("SW listo"))
+      .catch(error => console.log("Error sw", error));
+  }
+</script>
 </body>
+
 </html>
